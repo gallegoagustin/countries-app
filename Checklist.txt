@@ -1,0 +1,17 @@
+- Cambiar los alerts por sweetalert
+
+- Arreglar el bug de la barra de búsqueda (ver si se arregla con el back)
+
+- Mejorar diseño
+
+- Setear la imagen blureada como backgound de todo
+
+- Que el paginado aparezca siempre al final de la app
+
+- Dejar lindo el código
+
+- Escribir un readme (no olvidarme del .env)
+
+- Ver los de los http y https antes del deploy
+
+- Deployar a vercel y heroku
