@@ -135,7 +135,7 @@ function Filter(props) {
             <div className={styles.selectButtons}>
                     <select 
                         name="continent" 
-                        className={styles.selectButton}
+                        className='homeButton'
                         value={state.continent}
                         onChange={(e) => {handleChange(e)}}
                     >
@@ -149,7 +149,7 @@ function Filter(props) {
                     </select>
                     <select 
                         name="order" 
-                        className={styles.selectButton}
+                        className='homeButton'
                         value={state.order}
                         onChange={(e) => {handleChange(e)}}
                     >
@@ -162,7 +162,7 @@ function Filter(props) {
                     </select>
                     <select 
                         name="activity" 
-                        className={styles.selectButton}
+                        className='homeButton'
                         value={state.activity}
                         onChange={(e) => {handleChange(e)}}
                     >
@@ -173,7 +173,7 @@ function Filter(props) {
                     </select>
                 </div>
                 <button 
-                    className={styles.searchButton} 
+                    className='homeButton'
                     type="submit">
                     Search
                 </button>

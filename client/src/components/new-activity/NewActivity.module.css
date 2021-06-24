@@ -37,11 +37,11 @@
     border-style: solid;
     border-width: 1px;
     border-radius: 3px;
-    border-color: #222831;
+    border-color: #000;
 }
 
 .formButton:hover {
-    background-color: #222831;
+    background-color: #000;
     color: #00adb5;
 }
 
@@ -51,7 +51,7 @@
     border-style: solid;
     border-width: 1px;
     border-radius: 3px;
-    border-color: #222831;
+    border-color: #000;
 }
 
 #boxHeight {
@@ -67,14 +67,14 @@
 .success {
     margin-top: 0.5em;
     color: #4BB543;
-    background-color: #222831;
+    background-color: #000;
     border-radius: 3px;
 }
 
 .error {
     margin-top: 0.5em;
     color: #CC0000;
-    background-color: #222831;
+    background-color: #000;
     border-radius: 3px;
 }
 

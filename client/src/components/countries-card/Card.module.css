@@ -1,5 +1,5 @@
 .cardContainer {
-    background-color: #393e46;
+    background-color: rgb(0, 173, 181, 0.7);
     max-width: 20em;
     margin: 1em 1em;
     padding-bottom: 1em;
@@ -27,18 +27,18 @@
 .cardText {
     display: flex;
     justify-content: center;
-    color: #eeeeee;
+    color: #000;
 }
 
 .seeMore {
     display: flex;
     justify-content: center;
-    color: #eeeeee;
+    color: #000;
 }
 
 .seeMore:link, .seeMore:visited, .seeMore:active {
     text-decoration: none;
-    color: #fff;
+    color: #000;
 }
 
 @media (max-width: 768px) {

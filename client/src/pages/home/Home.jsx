@@ -16,17 +16,24 @@ function Home(props) {
 
     return (
 
-        <div className={styles.homeContainer}>
+        <>
 
-            <Search/>
-            
-            <p className={styles.filterText}>Or filter/sort by</p>
-            
-            <Filter/>
-            
-            <Row/>
+            <div className={styles.homeContainer}>
 
-        </div>
+                <div className={styles.findersBox}>
+
+                    <Search/>
+                    
+                    <p className={styles.filterText}>Or filter/sort by</p>
+                    
+                    <Filter/>
+
+                </div>
+                
+                <Row/>
+
+            </div>
+        </>
 
     )
 }

@@ -6,15 +6,15 @@ export default function About() {
 
         <div className={styles.aboutContainer}>
 
-            <div className={styles.aboutTitle}>
-
-                <h1>About Countries App</h1>
-
-                <hr className={styles.separator} />
-                
-            </div>
+            
 
             <div className={styles.textBox}>
+
+                <div className={styles.aboutTitle}>
+
+                    <h1>About Countries App</h1>
+                    
+                </div>
 
                 <p>This application was developed in order to improve my skills during Henry's bootcamp and applying most of technologies learned at it.</p>
 

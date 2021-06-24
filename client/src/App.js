@@ -9,7 +9,6 @@ import Activity from './pages/activity-form/Activity.jsx';
 import Detail from './pages/country-detail/Detail.jsx';
 import NavBar from './components/nav/NavBar.jsx';
 import Footer from './components/footer/Footer.jsx';
-import './App.css';
 
 function App(props) {
   
@@ -18,19 +17,23 @@ function App(props) {
         await props.getCountries();
         await props.getAllCountries();
         props.switchLoading(false);
-      }
-      start();
+    }
+    start();
   }, [])
   
   return (
     <>
-      <Route exact path='/' component={Landing}/>
-      <Route path='/:s' component={NavBar}/>
-      <Route path='/home' component={Home}/>
-      <Route path='/about' component={About}/>
-      <Route path='/detail/:id' component={Detail}/>
-      <Route path='/activity' component={Activity}/>
-      <Route path='/:s' component={Footer}/>
+      <div className='bkgImage'>
+      <div className='bodyContainer'>
+        <Route exact path='/' component={Landing}/>
+        <Route path='/:s' component={NavBar}/>
+        <Route path='/home' component={Home}/>
+        <Route path='/about' component={About}/>
+        <Route path='/detail/:id' component={Detail}/>
+        <Route path='/activity' component={Activity}/>
+        <Route path='/:s' component={Footer}/>
+      </div>
+      </div>
     </>
   );
 }

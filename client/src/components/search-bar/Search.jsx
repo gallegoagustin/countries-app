@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { filterCountries, getCountry} from '../../actions';
+import swal from 'sweetalert';
 import styles from './Search.module.css';
 
 function Search(props) {
@@ -74,7 +75,7 @@ function Search(props) {
         event.preventDefault();
 
         if(input.length === 0) {
-            alert("Please enter a country")
+            swal("Please enter a country")
         } else {
             props.getCountry(input);
         }
@@ -98,7 +99,7 @@ function Search(props) {
                 />
 
                 <button 
-                    className={styles.searchButton} 
+                    className='homeButton'
                     type="submit">
                     Search
                 </button>

@@ -5,14 +5,11 @@ import styles from '../landing/Landing.module.css';
 export default function Landing() {
     return (
 
-        <>
-            <div className={styles.landingContainer}></div>
+        <div className={styles.landingContainer}>
 
             <div className={styles.boxContainer}>
             
                 <h1>Countries App</h1>
-
-                <hr className={styles.separator}></hr>
 
                 <p>This app was built as a learning project for <strong>Henry's bootcamp</strong>. You will be able to look for information about any country in the world and add touristic activities for them.</p>
                 
@@ -24,7 +21,7 @@ export default function Landing() {
                     to='/home'>
                     <a 
                         href='#!'
-                        className={styles.getStartedBox}>
+                        className='homeButton'>
                         <span>
                             Get started
                         </span>
@@ -32,7 +29,8 @@ export default function Landing() {
                 </Link>
             
             </div>
-        </>
-    
+
+        </div>
+
     )
 }

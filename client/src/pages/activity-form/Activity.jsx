@@ -7,15 +7,14 @@ export default function Activity() {
 
         <div className={styles.activityContainer}>
 
-            <div>
+            <div className={styles.boxContainer}>
 
                 <h1>New activities form</h1>
 
-                <hr className={styles.separator}></hr>
+                <NewActivity/>
 
             </div>
 
-            <NewActivity/>
 
         </div>
         

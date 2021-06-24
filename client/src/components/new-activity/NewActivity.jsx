@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { connect } from 'react-redux';
 import { getAllCountries } from '../../actions';
+import swal from 'sweetalert';
 import styles from './NewActivity.module.css';
 
 const axios = require('axios').default;
@@ -59,11 +60,11 @@ function NewActivity(props) {
         event.preventDefault();
         
         if(!state.name.length){
-            return alert("Please enter a valid name")
+            return swal("Please enter a valid name")
         }
 
         if(state.length <= 0) {
-            return alert("Please enter a valid length")
+            return swal("Please enter a valid length")
         }
 
         setResponse(await axios({
@@ -86,7 +87,7 @@ function NewActivity(props) {
 
     return (
 
-        <div className={styles.formContainer}>
+        <div>
 
             <form className={styles.form} onSubmit={(e) => {handleSubmit(e)}}>
 

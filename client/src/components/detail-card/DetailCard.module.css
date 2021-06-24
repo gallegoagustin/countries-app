@@ -1,12 +1,7 @@
 .detailRow {
-    background-color: transparent;
     display: flex;
     padding: 1em 1em;
     align-items: top;
-    border-style: solid;
-    border-width: 1px;
-    border-color: #222831;
-    border-radius: 5px;
 }
 
 .detailText {
