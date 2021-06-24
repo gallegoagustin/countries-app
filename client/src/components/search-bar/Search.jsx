@@ -1,7 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { filterCountries, getCountry} from '../../actions';
-import swal from 'sweetalert';
 import styles from './Search.module.css';
 
 function Search(props) {
@@ -10,7 +9,9 @@ function Search(props) {
 
     function handleChange (event) {
 
-        setInput(event.target.value)
+        setInput(event.target.value);
+
+        props.getCountry(input.toLowerCase());
 
     }
 
@@ -70,7 +71,7 @@ function Search(props) {
         
     }
 
-    function handleSubmit(event) {
+    /* function handleSubmit(event) {
 
         event.preventDefault();
 
@@ -80,7 +81,7 @@ function Search(props) {
             props.getCountry(input);
         }
 
-    }
+    } */
 
     return (
 
@@ -88,7 +89,8 @@ function Search(props) {
 
             <form 
                 className={styles.searchForm} 
-                onSubmit={(e) => {handleSubmit(e)}}>
+                //onSubmit={(e) => {handleSubmit(e)}}
+            >
 
                 <input 
                     className={styles.searchBox} 
@@ -100,6 +102,7 @@ function Search(props) {
 
                 <button 
                     className='homeButton'
+                    id={styles.searchButton}
                     type="submit">
                     Search
                 </button>

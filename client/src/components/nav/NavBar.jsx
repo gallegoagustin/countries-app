@@ -12,7 +12,7 @@ export default function NavBar() {
                 <Link to='/home'>
                     <div className={styles.titleContainer}>
                         <img className={styles.navIcon} src={Logo} alt="world-icon" />
-                        <h1 className={styles.navTitle}>Countries App</h1>
+                        <h1 className={styles.navTitle}>Coun-Trips App</h1>
                     </div>
                 </Link>
 
@@ -23,11 +23,8 @@ export default function NavBar() {
                     
                     <Link to='/activity'><a href='#!' className='homeButton'><span>Add activities</span></a></Link>
                 </div>
+                
             </div>
-
-            
-
-            
 
         </nav>
     )

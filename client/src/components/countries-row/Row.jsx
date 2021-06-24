@@ -11,6 +11,7 @@ function Row(props) {
     const countriesPerPage = 10;
     const lastCountry =  props.currentPage * countriesPerPage;
     const firstCountry = lastCountry - countriesPerPage;
+    console.log(props.countries)
     const currentCountries = props.countries?.slice(firstCountry, lastCountry);
 
     return (

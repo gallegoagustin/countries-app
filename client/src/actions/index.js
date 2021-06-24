@@ -22,9 +22,6 @@ export function getCountry(name) {
     return async function(dispatch) {
         const response = await axios.get(`http://localhost:3001/countries?name=${name}`);
         const countries = response.data;
-        if(!countries.length) {
-            return alert('We could not find any country')
-        }
         dispatch({ type: GET_COUNTRY_NAME, payload: countries });
     }
 }

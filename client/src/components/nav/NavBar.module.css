@@ -4,8 +4,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 0 1em;
-    box-shadow: 0 3px 5px 3px rgba(0,0,0,0.5);
 }
 
 .navRow {
@@ -57,9 +55,14 @@
 
 @media (max-width: 768px) {
     .navContainer {
-        width: 100vp;
         height: 30vh;
+    }
+
+    .navRow {
+        margin-top: 1em;
         flex-direction: column;
-        justify-content: space-evenly;
+        height: auto;
+        width: 80%;
+        padding: 1em 0;
     }
 }

@@ -61,7 +61,7 @@ function Filter(props) {
     function handleSubmit(event) {
 
         event.preventDefault();
-        
+      
         props.switchLoading(true);
 
         props.changePage(1);

@@ -32,7 +32,7 @@ module.exports = async(req, res) => {
         match = match.concat(match2);
 
         if(!match.length) {
-            return res.json({message: 'We could not find any country'})
+            return res.json([])
         } else {
             return res.json(match);
         }

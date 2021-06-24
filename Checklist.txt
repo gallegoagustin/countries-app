@@ -1,4 +1,4 @@
-- Arreglar el bug de la barra de búsqueda (ver si se arregla con el back)
+- Que la barra de búsqueda no vaya una búsqueda atrás
 
 - Escribir un readme (no olvidarme del .env)
 
