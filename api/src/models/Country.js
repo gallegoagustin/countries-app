@@ -1,4 +1,4 @@
-const { DataTypes } = require('sequelize');
+const { DataTypes, STRING } = require('sequelize');
 
 module.exports = (sequelize) => {
 
@@ -32,6 +32,15 @@ module.exports = (sequelize) => {
     },
     population: {
       type: DataTypes.INTEGER
+    },
+    currencies: {
+      type: DataTypes.STRING
+    },
+    demonym: {
+      type: DataTypes.STRING
+    },
+    language: {
+      type: DataTypes.STRING
     }
   });
 };

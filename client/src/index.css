@@ -4,10 +4,7 @@
 }
 
 body {
-    background-image: url('./assets/world-bkg-desktop.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+    background-color: #eee5e5;
     position: absolute;
     top: 0;
     left: 0;
@@ -22,28 +19,47 @@ a:visited, a:link, a:active {
 }
 
 .homeButton {
+    margin: 0 0.25em;
     padding: 0 0.5em;
-    margin-left: 0.5em;
     background-color: transparent;
     height: 2.2em;
     width: auto;
     font-size: 1rem;
-    color: #000;
-    border-style: solid;
-    border-width: 1px;
-    border-color: #000;
-    border-radius: 5px;    
+    color: #090446;
+    border-style: hidden;  
 }
 
 .homeButton:hover {
-    background-color: #000;
-    color: #00adb5;
-    border-color: #000;
+    background-color: #090446;
+    color: #fff;
+    border-color: #090446;
+    border-radius: 35px;
+}
+
+.orangeButton {
+    margin: 0 0.25em;
+    padding: 0 0.5em;
+    background-color: #f71735;
+    height: 2.2em;
+    width: auto;
+    font-size: 1rem;
+    color: #090446;
+    border-style: hidden;
+    border-radius: 35px;
+}
+
+.orangeButton:hover {
+    background-color: #c5122a;
+}
+
+::placeholder {
+    color: rgb(255, 255, 255, 0.3);
 }
 
 @media (max-width: 768px) {
     body {
-        background-image: url('./assets/world-bkg-mobile.jpg');
+        background-image: none;
+        background-color: #222831;
     }
 
     .homeButton {

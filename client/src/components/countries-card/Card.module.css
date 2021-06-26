@@ -1,44 +1,61 @@
 .cardContainer {
-    background-color: rgb(0, 173, 181, 0.7);
+    background-color: transparent;
     max-width: 20em;
     margin: 1em 1em;
     padding-bottom: 1em;
     display: flex;
     flex-direction: column;
+    align-items: center;
     border-style: solid;
     border-width: 1px;
-    border-color: #222831;
+    border-color: #c5c5c5;
     border-radius: 5px;
 }
 
 .cardContainer:hover {
-    transform: scale(1.1);
-    box-shadow: 5px 5px 2px 0px rgba(0,0,0,0.4);
+    box-shadow: 0 5px 10px 2px rgba(0,0,0,0.3);
 }
 
 .cardFlag {
+    margin-bottom: 1em;
     min-width: 20em;
     max-width: 20em;
     height: 12.5em;
-    padding-bottom: 1em;
-    border-radius: 5px;
+    border-radius: 5px 5px 0 0;
+}
+
+.cardTitle {
+    margin: 0.25em 0;
+    display: flex;
+    justify-content: center;
+    font-size: 1.3rem;
+    color: #786f52;
+    font-weight: bold;
 }
 
 .cardText {
+    margin: 0.25em 0;
     display: flex;
     justify-content: center;
-    color: #000;
+    color: #786f52;
 }
 
 .seeMore {
+    width: 15em;
+    margin: 0.25em 0;
     display: flex;
     justify-content: center;
-    color: #000;
+    color: #f71735;
+    font-size: 0.75rem;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #f71735;
+    border-radius: 5px;
 }
 
 .seeMore:link, .seeMore:visited, .seeMore:active {
     text-decoration: none;
-    color: #000;
+    color: #f71735;
 }
 
 @media (max-width: 768px) {

@@ -21,7 +21,10 @@ const loadCountriesToDb = async() => {
                 capital: aux[i].capital,
                 subregion: aux[i].subregion,
                 area: aux[i].area,
-                population: aux[i].population
+                population: aux[i].population,
+                currencies: aux[i].currencies[0].name,
+                demonym: aux[i].demonym,
+                language: aux[i].languages[0].name
             }
         })
     }

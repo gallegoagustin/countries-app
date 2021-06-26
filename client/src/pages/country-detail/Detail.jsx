@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { Link } from 'react-router-dom'
 import DetailCard from '../../components/detail-card/DetailCard';
 import styles from './Detail.module.css';
 
@@ -9,7 +10,6 @@ function Detail(props) {
         <div className={styles.detailContainer}>
 
             <div className={styles.boxContainer}>
-                <h1>Detailed information for {props.detail.name}</h1>
                 <DetailCard />
             </div>
 
@@ -17,14 +17,14 @@ function Detail(props) {
 
                 <div className={styles.activitiesContainer}>
 
-                    <p className={styles.activitiesTitle}><strong>Touristic activities</strong></p>
+                    <h1 className={styles.activitiesTitle}>Other travelers also recommended these activities </h1>
 
                     <div className={styles.activitiesRow}>
                         
                         {
                             !props.detail.activities?.length ?
                             
-                            <span className={styles.emptyList}>There are no activities yet</span> :
+                            <span className={styles.emptyList}><i class="fas fa-exclamation-triangle"></i>There are no suggested activities for this country yet <Link to='/activity'><button className='orangeButton' id={styles.firstButton}>Be the first!</button></Link></span> :
                             
                             props.detail.activities?.map((a) => 
                                 <div className={styles.activityBox}>
@@ -32,6 +32,7 @@ function Detail(props) {
                                     <strong>Level:</strong> {a.level}/5<br></br>
                                     <strong>Length:</strong> {a.length} hour(s)<br></br>
                                     <strong>Season:</strong> {a.season}<br></br>
+                                    
                                 </div>
                             )
                         }

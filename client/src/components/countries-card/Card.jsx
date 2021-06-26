@@ -10,25 +10,28 @@ function Card(props) {
 
             <img className={styles.cardFlag} src={props.flag} alt="" />
 
-            <div className={styles.cardText}>
-                Name: {props.name}
+            <div className={styles.cardTitle}>
+                Visit {props.name}!
             </div>
 
             <div className={styles.cardText}>
                 Continent: {props.continent}
             </div>
 
+            <div className={styles.cardText}>
+                Capital: {props.capital}
+            </div>
+
             <div>
                 <Link
                     to={`/detail/${props.id}`}>
-                    <a 
-                        href="#!"
+                    <span 
                         className={styles.seeMore}
                         onClick={() => {props.countryDetail(props.id)}}>
                         <strong>
-                            See more
+                            More about {props.name}
                         </strong>
-                    </a>
+                    </span>
                 </Link>
             </div>
 
@@ -40,6 +43,6 @@ function mapDispatchToProps(dispatch) {
     return {
       countryDetail: (id) => dispatch(countryDetail(id)),
     };
-  }
+}
   
 export default connect(null, mapDispatchToProps)(Card);

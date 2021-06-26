@@ -23,7 +23,7 @@ function Row(props) {
                     !currentCountries.length ? <NoCountries/> :
                     
                     currentCountries?.map((country) => 
-                        <Card key={country.id} flag={country.flag} name={country.name} continent={country.continent} id={country.id}/>
+                        <Card key={country.id} flag={country.flag} name={country.name} continent={country.continent} capital={country.capital} id={country.id}/>
                     )
                 }
             </div>

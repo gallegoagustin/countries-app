@@ -1,6 +1,4 @@
-- Que la barra de búsqueda no vaya una búsqueda atrás
-
-- Escribir un readme (no olvidarme del .env)
+- Solucionar lo del dado (no encuentra cuando arranca de una pag > 1)
 
 - Ver los de los http y https antes del deploy
 

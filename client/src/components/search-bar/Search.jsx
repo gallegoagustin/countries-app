@@ -8,10 +8,8 @@ function Search(props) {
     const [input, setInput] = React.useState("");
 
     function handleChange (event) {
-
+    
         setInput(event.target.value);
-
-        props.getCountry(input.toLowerCase());
 
     }
 
@@ -71,17 +69,13 @@ function Search(props) {
         
     }
 
-    /* function handleSubmit(event) {
+    function handleSubmit(event) {
 
         event.preventDefault();
 
-        if(input.length === 0) {
-            swal("Please enter a country")
-        } else {
-            props.getCountry(input);
-        }
+        props.getCountry(input.toLowerCase());
 
-    } */
+    }
 
     return (
 
@@ -89,7 +83,7 @@ function Search(props) {
 
             <form 
                 className={styles.searchForm} 
-                //onSubmit={(e) => {handleSubmit(e)}}
+                onSubmit={(e) => {handleSubmit(e)}}
             >
 
                 <input 
@@ -101,10 +95,9 @@ function Search(props) {
                 />
 
                 <button 
-                    className='homeButton'
-                    id={styles.searchButton}
+                    className='orangeButton'
                     type="submit">
-                    Search
+                    <i class="fas fa-search"></i> Search
                 </button>
 
             </form>
@@ -132,6 +125,6 @@ function mapDispatchToProps(dispatch) {
       filterCountries: (list) => dispatch(filterCountries(list)),
       getCountry: (input) => dispatch(getCountry(input))
     };
-  }
+}
   
 export default connect(mapStateToProps, mapDispatchToProps)(Search);

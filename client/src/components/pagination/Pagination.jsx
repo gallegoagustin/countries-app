@@ -15,12 +15,7 @@ function Pagination(props) {
 
         <ul className={styles.pagesList}>
 
-            {pages.map(page => 
-                page < 10 ?
-                <li key={page} className={props.currentPage === page ? styles.currentPage : styles.pageItem}>
-                    <a href="#!" onClick={() => {props.changePage(page)}}>0{page}</a>
-                </li>
-                :
+            {pages.map(page =>
                 <li key={page} className={props.currentPage === page ? styles.currentPage : styles.pageItem}>
                     <a href="#!" onClick={() => {props.changePage(page)}}>{page}</a>
                 </li>
