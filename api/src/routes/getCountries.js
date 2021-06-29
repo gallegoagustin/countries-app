@@ -39,13 +39,6 @@ module.exports = async(req, res) => {
     }
 
     const match = await Country.findAll();
-    let result = [];
-    let i = 0;
 
-    while(i < 10) {
-        result.push(match[i]);
-        i++
-    }
-
-    return res.json(result);
+    return res.json(match);
 }

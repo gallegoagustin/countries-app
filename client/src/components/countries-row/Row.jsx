@@ -8,10 +8,9 @@ import styles from './Row.module.css';
 
 function Row(props) {
 
-    const countriesPerPage = 10;
+    const countriesPerPage = 12;
     const lastCountry =  props.currentPage * countriesPerPage;
     const firstCountry = lastCountry - countriesPerPage;
-    console.log(props.countries)
     const currentCountries = props.countries?.slice(firstCountry, lastCountry);
 
     return (
@@ -28,7 +27,10 @@ function Row(props) {
                 }
             </div>
             
-            <Pagination countriesPerPage={countriesPerPage} totalCountries={props.countries.length}/>
+            {
+                props.countries.length <= countriesPerPage ? null :
+                <Pagination countriesPerPage={countriesPerPage} totalCountries={props.countries.length}/>
+            }
         </>
     )
 }

@@ -10,6 +10,8 @@ export default function Footer() {
 
                 <p>AGUSTIN GALLEGO</p>
 
+                <hr className={styles.separator} />
+
                 <div className={styles.iconsContainer}>
                     <a 
                         target="_blank"

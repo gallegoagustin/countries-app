@@ -1,5 +1,5 @@
 .detailContainer {
-    min-height: 85vh;
+    min-height: 95vh;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -7,6 +7,7 @@
 }
 
 .boxContainer {
+    background-color: #f3f3f3;
     width: 66%;
     margin-top: 1em;
     display: flex;
@@ -48,20 +49,19 @@
 }
 
 .activityBox {
-    background-color: transparent;
-    min-width: 10em;
-    padding: 0.5em 0.5em;
+    background-color: #fff;
+    width: 15em;
     margin: 1em 1em;
+    display: flex;
+    flex-direction: column;
     border-style: solid;
     border-width: 1px;
-    border-color: #000;
+    border-color: #c5c5c5;
     border-radius: 5px;
 }
 
 .activityBox:hover {
-    background-color: rgb(0, 173, 181, 1);
-    transform: scale(1.1);
-    box-shadow: 5px 5px 2px 0px rgba(0,0,0,0.4);
+    box-shadow: 0 5px 10px 2px rgba(0,0,0,0.3);
 }
 
 .emptyList {
@@ -69,12 +69,40 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 1em;
+    margin-top: 2em;
     color: #090446;
 }
 
 #firstButton {
     color: #eee5e5;
+}
+
+.activitiesText {
+    padding: 0.5em;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.activityImage {
+    width: 15em;
+    height: 10em;
+}
+
+.season {
+    margin: 0.25em 0;
+    display: flex;
+    justify-content: center;
+    color: #f71735;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #f71735;
+    border-radius: 5px;
+}
+
+#offers {
+    display: flex;
+    justify-content: center;
 }
 
 @media (max-width: 768px) {

@@ -1,5 +1,3 @@
-- Solucionar lo del dado (no encuentra cuando arranca de una pag > 1)
-
 - Ver los de los http y https antes del deploy
 
 - Deployar a vercel y heroku

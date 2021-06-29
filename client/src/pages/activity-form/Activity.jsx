@@ -7,12 +7,12 @@ export default function Activity() {
 
         <div className={styles.activityContainer}>
 
-            <div className={styles.boxContainer}>
+            <div className={styles.titleBox}>
+                <h1>new <span id={styles.title}>activities</span> form</h1>
+            </div>
 
-                <h1>New activities form</h1>
-
+            <div className={styles.formBox}>
                 <NewActivity/>
-
             </div>
 
 

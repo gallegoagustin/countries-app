@@ -7,18 +7,20 @@ import styles from './NewActivity.module.css';
 const axios = require('axios').default;
 
 function NewActivity(props) {
-
+    
     const [state, setState] = useState({
         name: "",
         level: 1,
         length: 1,
-        season: "summer",
+        season: "any",
+        description: "",
+        image: ""
     });
-
+    
     const [countries, setCountries] = useState([]);
-
+    
     const [response, setResponse] = useState({});
-
+    
     function clearAll(event) {
 
         event.preventDefault();
@@ -27,7 +29,9 @@ function NewActivity(props) {
             name: "",
             level: 1,
             length: 1,
-            season: "summer"
+            season: "summer",
+            description: "",
+            image: ""
         })
 
         setCountries([]);
@@ -42,16 +46,27 @@ function NewActivity(props) {
 
     }
 
+    function validateUrl(input) {
+
+        if(!input.length) {
+            return false;
+        }
+
+        if (!/https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()!@:%_\+.~#?&\/\/=]*)/.test(input)) {
+            return true;
+        }
+    }
+
     function handleChange(event) {
 
         if(event.target.name === "countries"){
             setCountries([...countries, event.target.value])  
-        }
+        };
 
         setState({
             ...state,
             [event.target.name]: event.target.value
-        })
+        });
 
     }
 
@@ -75,6 +90,8 @@ function NewActivity(props) {
                 level: parseInt(state.level),
                 length: parseInt(state.length),
                 season: state.season,
+                description: state.description,
+                image: state.image,
                 countries: countries
             }
         }))
@@ -94,7 +111,7 @@ function NewActivity(props) {
                 <div className={styles.formSet}>
 
                     <label className={styles.formTitles}>
-                        Name*:
+                        Activity name*:
                     </label>
 
                     <input
@@ -102,10 +119,32 @@ function NewActivity(props) {
                         className={styles.formBox}
                         onChange={(e) => {handleChange(e)}}
                         value={state.name}
-                        placeholder="Example: Trecking"
+                        placeholder="Paris city tour"
+                    />
+                    
+                </div>
+                    
+                <span className={state.name.length > 20 ? styles.alert : 'disabled'}> maximum of 20 characters exceeded</span>
+
+                <div className={styles.formSet}>
+
+                    <label className={styles.formTitles}>
+                        Short description*:
+                    </label>
+
+                    <textarea
+                        rows="5"
+                        cols="25"
+                        name="description"
+                        className={styles.formBox}
+                        onChange={(e) => {handleChange(e)}}
+                        value={state.description}
+                        placeholder="A nice walk through Paris during the afternoon..."
                     />
 
                 </div>
+
+                <span className={state.description.length > 140 ? styles.alert : 'disabled'}> maximum of 140 characters exceeded</span>
 
                 <div className={styles.formSet}>
 
@@ -146,14 +185,15 @@ function NewActivity(props) {
                         onChange={(e) => {handleChange(e)}}
                         value={state.length}
                         className={styles.formBox}
-                    />
+                        id={styles.lengthBox}
+                        />
 
                 </div>
 
                 <div className={styles.formSet}>
 
                     <label className={styles.formTitles} htmlFor="season">
-                        Season*:
+                        Best season:
                     </label>
 
                     <select 
@@ -163,7 +203,9 @@ function NewActivity(props) {
                         className={styles.formBox}
                     >
 
-                        <option value = "summer" defaultValue>Summer</option>
+                        <option value = "any" defaultValue>Any</option>
+
+                        <option value = "summer">Summer</option>
 
                         <option value = "spring">Spring</option>
                         
@@ -200,13 +242,31 @@ function NewActivity(props) {
 
                 </div>
 
+                <div className={styles.formSet}>
+
+                    <label className={styles.formTitles}>
+                        Image:
+                    </label>
+
+                    <input
+                        name="image"
+                        className={styles.formBox}
+                        onChange={(e) => {handleChange(e)}}
+                        value={state.image}
+                        placeholder="INSERT URL"
+                    />
+
+                </div>
+
+                <span className={validateUrl(state.image) ? styles.alert : 'disabled'}> you must enter an image url</span>
+
                 <div className={styles.buttonContainer}>
 
-                    <button className={styles.formButton} onClick={(e) => {clearCountries(e)}}>Reset countries</button>
+                    <button className='homeButton' onClick={(e) => {clearCountries(e)}}>Reset countries</button>
 
-                    <button className={styles.formButton} onClick={(e) => {clearAll(e)}}>Reset all</button>
+                    <button className='homeButton' onClick={(e) => {clearAll(e)}}>Reset all</button>
                     
-                    <button className={styles.formButton} type="submit">Add activity</button>
+                    <button className={state.description.length > 140 || state.name.length > 20 === true || validateUrl(state.image) ? 'disabled' :'orangeButton'} type="submit">Add activity</button>
 
                 </div>
                 

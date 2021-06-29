@@ -5,7 +5,6 @@ import DetailCard from '../../components/detail-card/DetailCard';
 import styles from './Detail.module.css';
 
 function Detail(props) {
-
     return (
         <div className={styles.detailContainer}>
 
@@ -28,11 +27,17 @@ function Detail(props) {
                             
                             props.detail.activities?.map((a) => 
                                 <div className={styles.activityBox}>
-                                    <strong>Name:</strong> {a.name}<br></br>
-                                    <strong>Level:</strong> {a.level}/5<br></br>
-                                    <strong>Length:</strong> {a.length} hour(s)<br></br>
-                                    <strong>Season:</strong> {a.season}<br></br>
-                                    
+                                    <img className={styles.activityImage} src={a.image || "https://cdn.pixabay.com/photo/2016/01/09/18/27/camera-1130731_960_720.jpg"}/>
+                                    <div className={styles.activitiesText}>
+                                        <strong>{a.name}</strong><br></br>
+                                        {a.description || "No description available"}<br></br>                                
+                                        <strong>Level</strong> {a.level}/5<br></br>
+                                        <strong>Length</strong> {a.length} hour(s)<br></br>
+                                        <span className={styles.season}>Best season: {a.season}</span><br></br>
+                                        <div id={styles.offers}>
+                                            <a target="_blank" href={`https://www.google.com/search?q=${a.name}+${props.detail.name}+buy+trip+classes`}><button className='homeButton'>Look for offers!</button></a>
+                                        </div>
+                                    </div>
                                 </div>
                             )
                         }

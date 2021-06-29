@@ -9,7 +9,7 @@ export default function Landing() {
 
             <div className={styles.boxContainer}>
             
-                <h1>Coun-Trips App</h1>
+                <h1 id={styles.title}>c<i class="fas fa-globe-americas"></i>untrips app</h1>
 
                 <p>This app was built as a learning project for <strong>Henry's bootcamp</strong>. You will be able to look for information about any country in the world and add touristic activities for them.</p>
                 
@@ -17,16 +17,7 @@ export default function Landing() {
                 
                 <p>You can check the <strong>responsive design</strong> too!</p>
                 
-                <Link 
-                    to='/home'>
-                    <a 
-                        href='#!'
-                        className='homeButton'>
-                        <span>
-                            Get started
-                        </span>
-                    </a>
-                </Link>
+                <Link to='/home'><button className='orangeButton'>Get started</button></Link>
             
             </div>
 

@@ -6,7 +6,7 @@ export default function NoCountries() {
 
         <div className={styles.boxContainer}>
 
-            <p>We could not find any country</p>
+            <p><i class="fas fa-exclamation-triangle"></i> We could not find any country, try another!</p>
             
         </div>
     )

@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { filterCountries, getCountry} from '../../actions';
+import { changePage, filterCountries, getCountry} from '../../actions';
 import styles from './Search.module.css';
 
 function Search(props) {
@@ -14,6 +14,8 @@ function Search(props) {
     }
 
     function handleClick() {
+
+        props.changePage(1);
 
         let allCountries = [...props.countries];
 
@@ -73,6 +75,8 @@ function Search(props) {
 
         event.preventDefault();
 
+        props.changePage(1);
+
         props.getCountry(input.toLowerCase());
 
     }
@@ -89,7 +93,7 @@ function Search(props) {
                 <input 
                     className={styles.searchBox} 
                     type="text" 
-                    placeholder="Example: Belgium"
+                    placeholder="Belgium"
                     value={input}
                     onChange={(e) => {handleChange(e)}}
                 />
@@ -123,7 +127,8 @@ function mapStateToProps(state) {
 function mapDispatchToProps(dispatch) {
     return {
       filterCountries: (list) => dispatch(filterCountries(list)),
-      getCountry: (input) => dispatch(getCountry(input))
+      getCountry: (input) => dispatch(getCountry(input)),
+      changePage: (number) => dispatch(changePage(number)),
     };
 }
   

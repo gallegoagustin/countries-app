@@ -1,30 +1,33 @@
 .aboutContainer {
-    height: 85vh;
+    width: 100%;
+    height: 95vh;
     display: flex;
-    flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
 }
 
-.aboutTitle {
-    text-align: center;
-    margin-bottom: 2em;
+.titleBox {
+    width: 33%;
+    height: 100%;
+    background-color: #090446;
+    color: #fff;
+    font-size: 3rem;
+    display: flex;
+    align-items: center;
+    text-align: start;
+    padding-left: 1em;
 }
 
 .textBox {
-    max-width: 50%;
-    background-color: rgb(0, 173, 181, 0.7);
-    padding: 1em;
-    border-radius: 5px;
-    border-style: solid;
-    border-width: 1px;
-    border-color: #222831;
-    border-radius: 5px;
-    text-align: justify;
-}
-
-.textBox p {
-    padding: 0.5em 0;
+    background-color: rgb(247, 23, 53, 0.3);
+    width: 66%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #090446;
+    font-size: 1.3rem;
+    padding: 0 0.5em;
 }
 
 .techList {
@@ -32,22 +35,12 @@
     padding-left: 1em;
 }
 
+#title {
+    color: #f71735;
+}
+
 @media (max-width: 768px) {
     .aboutContainer {
         height: auto;
-    }
-
-    .aboutTitle {
-        margin-top: 1em;
-    }
-
-    .textBox {
-        max-width: 80%;
-        margin: 1em 0;
-        text-align: left;
-    }
-
-    .separator {
-        width: 100%;
     }
 }

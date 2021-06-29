@@ -4,7 +4,7 @@
 }
 
 body {
-    background-color: #eee5e5;
+    background-color: #eeeeee;
     position: absolute;
     top: 0;
     left: 0;
@@ -53,17 +53,13 @@ a:visited, a:link, a:active {
 }
 
 ::placeholder {
-    color: rgb(255, 255, 255, 0.3);
+    color: rgb(255, 255, 255, 0.7);
+}
+
+.disabled {
+    visibility: hidden;
 }
 
 @media (max-width: 768px) {
-    body {
-        background-image: none;
-        background-color: #222831;
-    }
 
-    .homeButton {
-        margin-left: 0;
-        margin: 0.5em  0.5em;
-    }
 }

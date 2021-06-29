@@ -11,8 +11,7 @@ export default function NavBar() {
                 
                 <Link to='/home'>
                     <div className={styles.titleContainer}>
-                        <img className={styles.navIcon} src={Logo} alt="world-icon" />
-                        <h1 className={styles.navTitle}>Coun-Trips App</h1>
+                        <h1 className={styles.navTitle}>c<i class="fas fa-globe-americas"></i>untrips app</h1>
                     </div>
                 </Link>
 

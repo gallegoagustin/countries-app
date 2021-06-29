@@ -7,6 +7,8 @@ module.exports = async(req, res) => {
     const level = await dbParser(req.body.level);
     const length = await req.body.length;
     const season = await dbParser(req.body.season);
+    const description = req.body.description;
+    const image = req.body.image;
     let countries = req.body.countries;
     
     if(await activityExistanceCheck(name, level, length, season)) {
@@ -18,7 +20,9 @@ module.exports = async(req, res) => {
             name: name,
             level: level,
             length: length,
-            season: season
+            season: season,
+            description: description,
+            image: image
         }
     });
 
