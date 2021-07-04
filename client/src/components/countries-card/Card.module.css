@@ -61,10 +61,6 @@
 }
 
 @media (max-width: 768px) {
-    .cardContainer {
-        max-width: 90%;
-    }
-
     .cardFlag {
         min-width: 100%;
         max-width: 100%;

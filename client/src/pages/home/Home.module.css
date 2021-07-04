@@ -22,3 +22,9 @@
     background-color: #090446;
     color: #fff;
 }
+
+@media (max-width: 768px) {
+    .findersBox {
+        width: 80%;
+    }
+}

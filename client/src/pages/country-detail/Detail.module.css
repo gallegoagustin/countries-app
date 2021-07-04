@@ -111,6 +111,7 @@
 @media (max-width: 768px) {
     .boxContainer {
         width: 90%;
+        border-style: hidden;
     }
     
     .pageHeader {
@@ -118,7 +119,11 @@
     }
 
     .activitiesRow {
+        width: 100%;
         flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
     }
 
     .emptyList {
@@ -129,5 +134,19 @@
     .boxContainer h1 {
         width: 100%;
         text-align: center;
+    }
+
+    .activitiesTitle {
+        font-size: 1.5rem;
+        width: 90%;
+        height: auto;
+        text-align: center;
+    }
+
+    .emptyList {
+        width: 100%;
+        flex-direction: column;
+        text-align: center;
+        font-size: 1.1rem;
     }
 }

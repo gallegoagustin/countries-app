@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: column;
     width: 100%;
-    font-size: 1.2rem;
+    font-size: 1rem;
 }
 
 .formSet {
@@ -25,7 +25,6 @@
     border-radius: 3px;
     border-color: #090446;
     margin-left: 1em;
-    font-size: 1.2rem;
 }
 
 #boxHeight {
@@ -64,17 +63,33 @@
 }
 
 @media (max-width: 768px) {
-    .formContainer {
-        width: 80%;
-        margin: 1em 0;
+    .form {
+        font-size: 1rem;
+    }
+
+    .formSet {
+        flex-direction: column;
+        margin: 0.5em 0;
+    }
+
+    #boxHeight {
+        width: 90%;
+        height: 10em;
     }
 
     .formBox {
-        width: 100%;
+        margin-left: 0;
+        font-size: 1rem;
     }
+}
 
-    .formButton {
-        width: 100%;
-        margin: 0 0.1em;
+@media (min-width: 1367px) {
+    .form {
+        font-size: 1.2rem;
     }
+    
+    .formBox {
+        font-size: 1.2rem;
+    }
+    
 }

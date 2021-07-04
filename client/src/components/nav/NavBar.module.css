@@ -35,14 +35,21 @@
 
 @media (max-width: 768px) {
     .navContainer {
-        height: 30vh;
+        height: 20vh;
     }
-
+    
     .navRow {
-        margin-top: 1em;
+        width: 100%;
+        height: 8vh;
+        display: flex;
         flex-direction: column;
-        height: auto;
-        width: 80%;
-        padding: 1em 0;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+    }
+    
+    .titleContainer {
+        width: auto;
+        margin-bottom: 1em;
     }
 }

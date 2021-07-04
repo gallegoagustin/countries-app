@@ -41,6 +41,25 @@
 
 @media (max-width: 768px) {
     .aboutContainer {
+        flex-direction: column-reverse;
         height: auto;
+    }
+
+    .titleBox {
+        font-size: 2rem;
+        width: 100%;
+        height: auto;
+        padding-left: 0;
+    }
+
+    .textBox {
+        font-size: 1rem;
+        width: 100%;
+        height: auto;
+        padding: 0;
+    }
+
+    .techList {
+        padding-left: 0;
     }
 }

@@ -36,5 +36,22 @@
 }
 
 @media (max-width: 768px) {
+    .activityContainer {
+        flex-direction: column;
+        height: auto;
+    }
 
+    .titleBox {
+        font-size: 2rem;
+        width: 100%;
+        height: auto;
+        padding: 0;
+    }
+
+    .formBox {
+        font-size: 1rem;
+        width: 100%;
+        height: auto;
+        padding: 0;
+    }
 }

@@ -3,22 +3,6 @@
     margin-top: 0.5em;
 }
 
-.searchButton {
-    margin: 0 0.25em;
-    padding: 0 0.5em;
-    background-color: #f71735;
-    height: 2.2em;
-    width: auto;
-    font-size: 1rem;
-    color: #090446;
-    border-style: hidden;
-    border-radius: 35px;
-}
-
-.searchButton:hover {
-    background-color: #c5122a;
-}
-
 .filterSelect {
     margin: 0 0.25em;
     padding: 0 0.5em;
@@ -35,18 +19,15 @@
 
 @media (max-width: 768px) {
     .formContainer {
-        display: flex;
         flex-direction: column;
-        align-items: center;
-        margin-top: 0.5em;
     }
 
-    .selectButtons{
+    .selectButtons {
         display: flex;
         flex-direction: column;
     }
-    
-    .selectButton {
+
+    .filterSelect {
         margin: 0.5em 0;
     }
 }

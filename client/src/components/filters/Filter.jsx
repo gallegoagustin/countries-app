@@ -132,7 +132,7 @@ function Filter(props) {
                 className={styles.formContainer}
                 onSubmit={(e) => {handleSubmit(e)}}
             >
-            <div className={styles.selectButtons}>
+                <div className={styles.selectButtons}>
                     <select 
                         name="continent" 
                         className={styles.filterSelect}
