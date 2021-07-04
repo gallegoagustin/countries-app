@@ -11,7 +11,7 @@
     height: 100%;
     background-color: #090446;
     color: #fff;
-    font-size: 3rem;
+    font-size: 2.5rem;
     display: flex;
     align-items: center;
     text-align: start;
@@ -26,7 +26,7 @@
     flex-direction: column;
     justify-content: center;
     color: #090446;
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     padding: 0 0.5em;
 }
 
@@ -61,5 +61,15 @@
 
     .techList {
         padding-left: 0;
+    }
+}
+
+@media (min-width: 1367px) {
+    .titleBox {
+        font-size: 3rem;
+    }
+    
+    .textBox {
+        font-size: 1.3rem;
     }
 }
