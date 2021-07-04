@@ -1,10 +1,9 @@
 import React, { useState } from 'react';
 import { connect } from 'react-redux';
 import { getAllCountries } from '../../actions';
+import axios from 'axios';
 import swal from 'sweetalert';
 import styles from './NewActivity.module.css';
-
-const axios = require('axios').default;
 
 function NewActivity(props) {
     
@@ -31,7 +30,7 @@ function NewActivity(props) {
             length: 1,
             season: "summer",
             description: "",
-            image: ""
+            image: "",
         })
 
         setCountries([]);
@@ -84,7 +83,7 @@ function NewActivity(props) {
 
         setResponse(await axios({
             method: 'post',
-            url: 'http://localhost:3001/activity', 
+            url: '/activity', 
             data: {     
                 name: state.name,
                 level: parseInt(state.level),

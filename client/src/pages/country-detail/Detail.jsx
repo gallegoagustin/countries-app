@@ -25,21 +25,22 @@ function Detail(props) {
                             
                             <span className={styles.emptyList}><i class="fas fa-exclamation-triangle"></i>There are no suggested activities for this country yet <Link to='/activity'><button className='orangeButton' id={styles.firstButton}>Be the first!</button></Link></span> :
                             
-                            props.detail.activities?.map((a) => 
-                                <div className={styles.activityBox}>
-                                    <img className={styles.activityImage} src={a.image || "https://cdn.pixabay.com/photo/2016/01/09/18/27/camera-1130731_960_720.jpg"}/>
-                                    <div className={styles.activitiesText}>
-                                        <strong>{a.name}</strong><br></br>
-                                        {a.description || "No description available"}<br></br>                                
-                                        <strong>Level</strong> {a.level}/5<br></br>
-                                        <strong>Length</strong> {a.length} hour(s)<br></br>
-                                        <span className={styles.season}>Best season: {a.season}</span><br></br>
-                                        <div id={styles.offers}>
-                                            <a target="_blank" href={`https://www.google.com/search?q=${a.name}+${props.detail.name}+buy+trip+classes`}><button className='homeButton'>Look for offers!</button></a>
+                                    props.detail.activities?.map((a) => 
+                                    <div className={styles.activityBox}>
+                                        <img className={styles.activityImage} src={a.image.includes('png') ? a.image : a.image.includes('jpg') ? a.image : "https://cdn.pixabay.com/photo/2016/01/09/18/27/camera-1130731_960_720.jpg"} alt="activity_image"/>
+                                        <div className={styles.activitiesText}>
+                                            <strong>{a.name}</strong><br></br>
+                                            {a.description || "No description available"}<br></br>                                
+                                            <strong>Level</strong> {a.level}/5<br></br>
+                                            <strong>Length</strong> {a.length} hour(s)<br></br>
+                                            <span className={styles.season}>Best season: {a.season}</span><br></br>
+                                            <div id={styles.offers}>
+                                                <a target="_blank" href={`https://www.google.com/search?q=${a.name}+${props.detail.name}+buy+trip+classes`}><button className='homeButton'>Look for offers!</button></a>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                            )
+                                )
+                            
                         }
 
                     </div>

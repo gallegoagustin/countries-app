@@ -45,7 +45,10 @@
 }
 
 .activitiesRow {
+    width: 80em;
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .activityBox {
