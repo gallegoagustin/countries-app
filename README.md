@@ -26,10 +26,14 @@ If you clone this repository you will get two folders: `api` and `client`, where
     DB_USER=PostgresUser
     DB_PASSWORD=PostgresPassword
     DB_HOST=localhost
+    DB_NAME=countries
+    PORT=3001
 
-Where `PostgresUser` and `PostgresPassword` mean your personal information to connect to Postgres.
+Where `PostgresUser` and `PostgresPassword` mean your personal information to connect to Postgres. `DB_NAME` and `PORT` can be modified in case it is needed.
 
-In order to finish the set up you must create a Postgres DB named `countries`, where all generated data will be located.
+In order to finish the set up you must create a Postgres DB named `countries` (or the same name you put into de env document), where all generated data will be located.
+
+You can check it working at this [link](https://countries-app-sigma.vercel.app/).
 
 Contact me if needed!
 
