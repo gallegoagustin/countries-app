@@ -1,4 +1,7 @@
-# COUN-TRIPS APP
+# COUNTRIES APP!
+
+[countries-home](https://user-images.githubusercontent.com/77341002/124470225-bc973080-dd71-11eb-8865-12b1aa78d335.png)
+
 
 ## About the App
 
