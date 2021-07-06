@@ -1,3 +1,0 @@
-- Ver los de los http y https antes del deploy
-
-- Deployar a vercel y heroku
