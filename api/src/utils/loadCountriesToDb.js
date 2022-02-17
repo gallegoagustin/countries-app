@@ -12,19 +12,20 @@ const loadCountriesToDb = async() => {
     let aux = paises.data;
     
     for(let i = 0; i < aux.length; i++) {
+        console.log(aux[i])
         await Country.findOrCreate({
             where: {
-                id: aux[i].alpha3Code,
-                name: aux[i].name,
-                flag: aux[i].flag,
-                continent: aux[i].region,
-                capital: aux[i].capital,
-                subregion: aux[i].subregion,
-                area: aux[i].area,
-                population: aux[i].population,
-                currencies: aux[i].currencies[0].name,
-                demonym: aux[i].demonym,
-                language: aux[i].languages[0].name
+                id: aux[i].alpha3Code || 'Unknown',
+                name: aux[i].name || 'Unknown',
+                flag: aux[i].flags.png,
+                continent: aux[i].region || 'Unknown',
+                capital: aux[i].capital || 'Unknown',
+                subregion: aux[i].subregion || 'Unknown',
+                area: aux[i].area || 0,
+                population: aux[i].population || 0,
+                currencies: aux[i].currencies ? aux[i].currencies[0].name : 'Unknown',
+                demonym: aux[i].demonym || 'Unknown',
+                language: aux[i].languages[0].name || 'Unknown'
             }
         })
     }
