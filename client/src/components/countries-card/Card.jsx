@@ -8,7 +8,7 @@ function Card(props) {
     return (
         <div className={styles.cardContainer}>
 
-            <img className={styles.cardFlag} src={props.flag} alt="" />
+            <img className={styles.cardFlag} src={props.flags.png} alt="" />
 
             <div className={styles.cardTitle}>
                 Visit {props.name}!
