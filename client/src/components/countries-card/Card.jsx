@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { countryDetail } from '../../actions';
@@ -8,7 +8,7 @@ function Card(props) {
     return (
         <div className={styles.cardContainer}>
 
-            <img className={styles.cardFlag} src={props.flags.png} alt="" />
+            <img className={styles.cardFlag} src={props.flag} alt="" />
 
             <div className={styles.cardTitle}>
                 Visit {props.name}!
