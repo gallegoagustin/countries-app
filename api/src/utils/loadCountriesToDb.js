@@ -8,7 +8,7 @@ const loadCountriesToDb = async() => {
         return null;
     }
 
-    let paises = await axios.get('https://restcountries.eu/rest/v2/all');
+    let paises = await axios.get('https://restcountries.com/v2/all');
     let aux = paises.data;
     
     for(let i = 0; i < aux.length; i++) {
